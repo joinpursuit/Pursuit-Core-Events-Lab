@@ -1,0 +1,54 @@
+body {
+  background: azure;
+}
+
+h1 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+textarea {
+  border: 2px solid black;
+  display: block;
+  width: 100%;
+}
+
+p {
+  color: crimson;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+li {
+  color: rebeccapurple;
+  margin: 10px 0 0 20px;
+}
+
+li button {
+  margin-left: 10px;
+  background: lightpink;
+  color: darkred;
+  font-weight: bold;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+h1,
+form,
+p,
+ul {
+  margin: auto;
+  max-width: 819px;
+  padding: 0 10px;
+  width: 90%;
+}
+
+button[type="submit"] {
+  font-size: 20px;
+  margin-top: 5px;
+  padding: 10px;
+  width: 100%;
+}
