@@ -76,4 +76,4 @@ And the following functionalities:
 - Implement a delete `button` next to each `li` that removes that `li` tag entirely.
 - Clicking a todo that is crossed out (completed) uncrosses the todo.  
 - Add the ability to add multiple to-dos if the user submits a text input with multiple lines. Each line should be a new to-do.
-- Look at the next lesson **Intro to CSS** and add some styling to your app.
+- Add some CSS styling to your app.
