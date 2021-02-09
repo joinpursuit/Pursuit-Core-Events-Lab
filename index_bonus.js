@@ -22,11 +22,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const value = textarea.value.trim();
 
     if (!value) {
-      errors.textContent = "Empty todo value?!";
+      errors.innerText = "Empty todo value?!";
       return;
     }
 
-    errors.textContent = "";
+    errors.innerText = "";
     textarea.value = "";
 
     for (let line of value.split("\n")) {
@@ -36,10 +36,10 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       const item = document.createElement("li");
-      item.textContent = line;
+      item.innerText = line;
 
       const button = document.createElement("button");
-      button.textContent = "delete";
+      button.innerText = "delete";
       item.appendChild(button);
 
       todos.appendChild(item);

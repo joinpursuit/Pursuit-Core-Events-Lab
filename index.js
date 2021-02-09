@@ -13,14 +13,14 @@ document.addEventListener("DOMContentLoaded", function () {
     event.preventDefault();
 
     if (!input.value) {
-      errors.textContent = "Empty todo value?!";
+      errors.innerText = "Empty todo value?!";
       return;
     }
 
-    errors.textContent = "";
+    errors.innerText = "";
 
     const item = document.createElement("li");
-    item.textContent = input.value;
+    item.innerText = input.value;
     todos.appendChild(item);
   });
 });
