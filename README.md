@@ -37,7 +37,7 @@ And the following functionalities:
     1. Add an event listener to the form with `.addEventListener`. What event do you want to listen for?
     2. Remember, what does `event.preventDefault()` do?
     3. Grab the value the user typed from the text input. Do you remember what property of the input node has this? If not Google it or ask a peer.
-    4. Create new `li` element with `document.createElement()`. Set its `textContent` property to be the text the user typed.
+    4. Create new `li` element with `document.createElement()`. Set its `innerText` property to be the text the user typed.
     5. Don't forget to append the created `li` to the list.
 
   </details>
