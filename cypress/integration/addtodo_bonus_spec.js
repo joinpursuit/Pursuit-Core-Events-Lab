@@ -1,4 +1,4 @@
-describe("My First Test", () => {
+describe("Todo App - Bonus", () => {
   it("clears the input when a todo is added", () => {
     cy.get("textarea").clear().type("Wash dishes");
     cy.get("button[type=submit]").click();
