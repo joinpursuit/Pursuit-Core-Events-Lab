@@ -4,5 +4,10 @@ orbs:
 workflows:
   build:
     jobs:
-      - cypress/run
-
+      - cypress/run:
+          spec: cypress/integration/addtodo_spec.js
+          post-steps:
+            - store_artifacts:
+                path: cypress/videos
+            - store_artifacts:
+                path: cypress/screenshots
