@@ -1,17 +1,22 @@
 console.log("Code your solution!")
 let ul = document.getElementById("unordered-list")
-
-button.addEventListener("click", () => {
-
+let form = document.querySelector("form")
+form.button.addEventListener("click", (event) => {
+    event.preventDefault();
     let input = document.getElementById("text-input")
     let input1 = input.value
+    let p = document.querySelector("p")
+    if(input1 === ""){
+        p.innerText = "Error. Todo cannot be empty"
+
+    }else{
+        let li = document.createElement("li")
+        li.textContent = input1
+        ul.appendChild(li)
+        p.innerText=""
+    }
     
-    debugger
-    let li = document.createElement("li")
-    debugger
-    li.textContent = input1
-    debugger
-    ul.appendChild(li)
+    
 })
 
 
