@@ -6,28 +6,23 @@ form.button.addEventListener("click", (event) => {
     let input = document.getElementById("text-input")
     let input1 = input.value
     let p = document.querySelector("p")
-    if(input1 === ""){
+    if(input1 === "") {
         p.innerText = "Error. Todo cannot be empty"
 
-    }else{
+    }
+    else {
         let li = document.createElement("li")
+        let btn = document.createElement("button")
+        btn.textContent = "Delete"
         li.textContent = input1
         ul.appendChild(li)
-        p.innerText=""
+        li.appendChild(btn)
+        p.textContent = ""
+        form.reset();
     }
-    
-    
+
+    ul.addEventListener("click", (event)  => {
+        event.target.style.textDecoration = "line-through"
+    })
+
 })
-
-
-
-
-// let list = document.querySelector("#user-list")
-
-// for (let i = 0; i < data.results.length; i++) {
-//     let li = document.createElement("li");
-//     let nationality = data.results[i].nat
-//     let firstName = data.results[i].name.first
-//     let lastName = data.results[i].name.last
-//     li.textContent = `${firstName} ${lastName} (${nationality})`;
-//     list.appendChild(li)
