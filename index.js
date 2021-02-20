@@ -2,19 +2,27 @@ console.log("Code your solution!")
 
 document.addEventListener("DOMContentLoaded", (event) => {
 
+    let input;
     const form = document.querySelector("form")
     form.addEventListener("submit", event => {
         event.preventDefault();
-        let input = document.querySelector("input").value
-        const li = document.createElement("li")
-        li.textContent = input 
-        document.querySelector("ul").appendChild(li)
+        
+        input = document.querySelector("input").value
+        let li = document.createElement("li")
+        let p = document.querySelector("p");
         
         if (input === "") {
-            const p = document.querySelector("p");
             p.textContent = "Error. Todo cannot be empty";
             
+        } else {
+            
+            li.textContent = input 
+            document.querySelector("ul").appendChild(li)
+
         }
-        input.value = "";
+        li.addEventListener("click", () => {
+            li.style.textDecoration = "line-through" 
+        })
     })
+    
 })
