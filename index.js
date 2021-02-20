@@ -23,11 +23,3 @@ document.addEventListener("DOMContentLoaded", () => {
     })
 })
 
-
-// let list = document.querySelector("li").textContent
-//     for(let el of list) {
-//         el.addEventListener("click", (event) => {
-//             event.target.style.textDecorationLine = "line-through";
-
- // input.document.querySelector("input").value = "";
- // input.reset()
