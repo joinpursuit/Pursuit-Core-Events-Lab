@@ -1,11 +1,16 @@
 const ul = document.querySelector("#unorder-list");
 const li = document.createElement("li");
 const submit = document.querySelector("button");
+
+
 submit.addEventListener("click", (event) => {
-    event.preventDefault()
+    event.preventDefault();
     const input = document.querySelector("input").value;
-    li.textContent = input
+    li.textContent = input;
     ul.appendChild(li);
 })
 
+li.addEventListener("click", () => {
+    li.style.textDecoration = "line-through"
+})
 
