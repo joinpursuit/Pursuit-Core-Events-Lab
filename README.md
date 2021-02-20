@@ -72,8 +72,8 @@ And the following functionalities:
 
 ## Bonus Tasks
 
-- Have the input go back to empty after adding a new todo.
+- Have the input go back to empty after adding a new todo. *
 - Implement a delete `button` next to each `li` that removes that `li` tag entirely.
-- Clicking a todo that is crossed out (completed) uncrosses the todo.  
+- Clicking a todo that is crossed out (completed) uncrosses the todo.  *
 - Add the ability to add multiple to-dos if the user submits a text input with multiple lines. Each line should be a new to-do.
 - Add some CSS styling to your app.
