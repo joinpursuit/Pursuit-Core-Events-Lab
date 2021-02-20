@@ -7,22 +7,22 @@ document.addEventListener("DOMContentLoaded", (event) => {
 	form.addEventListener("submit", (event) => {
 		event.preventDefault();
 
-		input = document.querySelector("input").value;
+		input = document.querySelector("input");
 
 		let li = document.createElement("li");
 		let p = document.querySelector("p");
         let button = document.createElement("button");;
 
-		if (input === "") {
+		if (input.value === "") {
 			p.textContent = "Error. Todo cannot be empty";
 		} else {
-			li.textContent = input;
+			li.textContent = input.value;
             document.querySelector("ul").appendChild(li);
             // need to attach the button to each li as it is created
 			button.textContent = "remove item";
 			document.querySelector("li").appendChild(button);
 		}
-input.value = " ";
+        input.value = " ";
 		li.addEventListener("click", () => {
 			li.style.textDecoration = "line-through";
         });
