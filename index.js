@@ -6,13 +6,17 @@ form.addEventListener("submit", (e) => {
 
 
     let lines = textArea.value.split("\n")
-    
+
     for (let i = 0; i < lines.length; i++) {
+        
+        if (lines[i] === "") {
+            continue;
+        }
 
         let li = document.createElement("li")
         let deleteButton = document.createElement("button")
 
-        li.textContent = lines[i]
+        li.textContent = lines[i] + " "
         deleteButton.textContent = "Delete"
         deleteButton.id = "delete-button"
 
