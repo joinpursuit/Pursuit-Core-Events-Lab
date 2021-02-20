@@ -1,0 +1,27 @@
+body {
+    background-color: black;
+    text-align: center;
+}
+
+
+h1 {
+    font-family: cursive;
+    color: pink;
+    border: 5px solid white;
+}
+
+li {
+    color: magenta;
+}
+
+#error {
+    animation: blinker .1s linear infinite;
+    color: red;
+}
+
+@keyframes blinker{
+    0% {
+        opacity: 0;
+    }
+
+}
