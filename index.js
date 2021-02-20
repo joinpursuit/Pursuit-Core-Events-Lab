@@ -1,4 +1,4 @@
-// console.log("Code your solution!")
+
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector("#todo-form");
   form.addEventListener("submit", (event) => {
