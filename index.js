@@ -23,6 +23,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
         li.addEventListener("click", () => {
             li.style.textDecoration = "line-through" 
         })
+        
     })
-    
 })
