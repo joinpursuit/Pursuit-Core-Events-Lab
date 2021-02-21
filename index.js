@@ -5,8 +5,8 @@ form.button.addEventListener("click", (event) => {
   event.preventDefault();
   let input = document.getElementById("text-input");
   let input1 = input.value;
-  let p = document.querySelector("p");
   let li = document.createElement("li");
+  let p = document.querySelector("p");
   let btn = document.createElement("button");
   if (input1 === "") {
     p.innerText = "Error. Todo cannot be empty";
@@ -19,14 +19,20 @@ form.button.addEventListener("click", (event) => {
     form.reset();
   }
   ul.addEventListener("click", (event) => {
-      //debugger
-    if (event.target === li && event.target.style.textDecoration !== "line-through") {
-      event.target.style.textDecoration = "line-through";
-    }else{
-    event.target.style.textDecoration = "none";
+      debugger
+    if (event.target.style.textDecoration = "none") {
+        debugger
+    event.target.style.textDecoration = "line-through";
+    }
+    else if (event.target.style.textDecoration = "line-through") {
+        debugger
+        event.target.style.textDecoration = "initial"
     }
   });
-  btn.addEventListener("click", () => {
+  
+  
+  
+    btn.addEventListener("click", () => {
     li.parentNode.removeChild(li);
   });
 });
