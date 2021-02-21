@@ -8,13 +8,14 @@ document.addEventListener("DOMContentLoaded", () => {
   form.addEventListener("submit", (event) => {
     event.preventDefault();
     const listItem = document.createElement("li");
-    const button = document.createElement("button")
+    const button = document.createElement("button");
     if (input.value.length === 0){
       p.textContent = `Error: To-Do Submittion Cannot Be Empty` 
     }else{
       listItem.textContent = input.value;
       ul.appendChild(listItem);
-      ul.appendChild(button)
+      button.textContent = "Delete Item"
+      listItem.appendChild(button);
       p.textContent= ""
     }
     input.value = ""
@@ -22,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
       listItem.style.textDecoration = "line-through"
     })
     button.addEventListener("click", (e) => {
-        listItem.remove(e)
+        button.parentNode.remove(e)
     })
   });
 });
