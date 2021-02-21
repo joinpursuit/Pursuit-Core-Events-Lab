@@ -20,7 +20,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     input.value = ""
     listItem.addEventListener("click", (event) => {
-      listItem.style.textDecoration = "line-through"
+        if (listItem.style.textDecoration === "line-through") {
+            listItem.style.textDecoration = "none"
+        } else {
+            listItem.style.textDecoration = "line-through"
+        }
     })
     button.addEventListener("click", (e) => {
         button.parentNode.remove(e)
