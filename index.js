@@ -18,15 +18,15 @@ form.button.addEventListener("click", (event) => {
     p.textContent = "";
     form.reset();
   }
-  ul.addEventListener("click", (event) => {
-      //debugger
-    if (event.target === li && event.target.style.textDecoration !== "line-through") {
-      event.target.style.textDecoration = "line-through";
-    }else{
-    event.target.style.textDecoration = "none";
-    }
-  });
   btn.addEventListener("click", () => {
     li.parentNode.removeChild(li);
   });
+});
+ul.addEventListener("click", (event) => {
+  debugger
+  if (event.target.style.textDecoration !== "line-through") {
+    event.target.style.textDecoration = "line-through";
+  }else{
+  event.target.style.textDecoration = "none";
+  }
 });
