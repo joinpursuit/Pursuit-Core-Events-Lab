@@ -29,8 +29,14 @@ document.addEventListener("DOMContentLoaded", (event) => {
 			// EVENT LISTENERS
 			// click done to cross it out
 			li.addEventListener("click", () => {
-				li.style.textDecoration = "line-through";
-				li.style.opacity = 0.3;
+                if (li.style.textDecoration === "line-through") {
+                    li.style.textDecoration = "none"
+                    li.style.opacity = 1;
+                } else {
+                    li.style.textDecoration = "line-through";
+                    li.style.opacity = 0.3;
+                    
+                }
 			});
 
 			// click remove to delete
