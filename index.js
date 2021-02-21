@@ -29,7 +29,7 @@ form.button.addEventListener("click", (event) => {
         event.target.style.textDecoration = "initial"
     }
   });
-  
+  let li = document.querySelector
   
   
     btn.addEventListener("click", () => {
