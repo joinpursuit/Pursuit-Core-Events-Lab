@@ -14,11 +14,13 @@ document.addEventListener("DOMContentLoaded", () => {
       for (const line of lines) {
         const listItem = document.createElement("li");
         const button = document.createElement("button");
-        listItem.textContent = line;
-        ul.appendChild(listItem);
-        button.textContent = "Delete Item";
-        listItem.appendChild(button);
-        p.textContent = "";
+        if (line.length !== 0) {
+            listItem.textContent = line;
+            ul.appendChild(listItem);
+            button.textContent = "Delete Item";
+            listItem.appendChild(button);
+            p.textContent = "";
+        }
         listItem.addEventListener("click", (event) => {
           if (listItem.style.textDecoration === "line-through") {
             listItem.style.textDecoration = "none solid rgb(0,0,0)";
