@@ -30,8 +30,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
 			// click done to cross it out
 			li.addEventListener("click", () => {
                 if (li.style.textDecoration === "line-through") {
-                    li.style.textDecoration = "none"
+                    li.style.textDecoration = "none solid rgb(0, 0, 0)"
                     li.style.opacity = 1;
+                    
                 } else {
                     li.style.textDecoration = "line-through";
                     li.style.opacity = 0.3;

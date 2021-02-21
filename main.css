@@ -7,6 +7,7 @@ body {
 h1 {
     color: #b292ee;
     font-size: 40px;
+    font-family: Helvetica;
 }
 
 form {
@@ -35,4 +36,18 @@ form button:hover {
 
 li {
     font-size: 30px;
+}
+
+li button {
+    display: inline-block;
+    margin-left: 10px;
+    border-radius: 6px;
+    border: 1px solid #b292ee;
+    background-color: rgb(229, 233, 236);
+    padding: 5px;
+}
+
+li button:hover {
+    background-color: #82c308;
+    color: white
 }
