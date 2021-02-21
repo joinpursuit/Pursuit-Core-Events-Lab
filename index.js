@@ -1,7 +1,7 @@
 console.log("Code your solution!");
 
 document.addEventListener("DOMContentLoaded", (event) => {
-	const input = document.querySelector("input");
+	const input = document.querySelector("textarea");
 	const form = document.querySelector("form");
 	const ul = document.querySelector("ul");
 	const p = document.querySelector("p");
