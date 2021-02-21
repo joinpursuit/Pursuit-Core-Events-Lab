@@ -8,16 +8,21 @@ document.addEventListener("DOMContentLoaded", () => {
   form.addEventListener("submit", (event) => {
     event.preventDefault();
     const listItem = document.createElement("li");
+    const button = document.createElement("button")
     if (input.value.length === 0){
-      p.textContent = `Error To Do Cannot Be Empty` 
+      p.textContent = `Error: To-Do Submittion Cannot Be Empty` 
     }else{
       listItem.textContent = input.value;
       ul.appendChild(listItem);
-      p.textContent=""
+      ul.appendChild(button)
+      p.textContent= ""
     }
     input.value = ""
     listItem.addEventListener("click", (event) => {
       listItem.style.textDecoration = "line-through"
+    })
+    button.addEventListener("click", (e) => {
+        listItem.remove(e)
     })
   });
 });
