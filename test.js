@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     form.addEventListener('submit', (event) => {
         event.preventDefault();
         let input = document.querySelector('#add_to_todo_list');
-        let item = input.value;
+        let item = input.value.split('\n');
         if(item){
             let li = document.createElement('li');
             li.classList.add('list_item');
@@ -39,6 +39,3 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
-
-
-
