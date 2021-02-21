@@ -5,6 +5,7 @@ form.button.addEventListener("click", (event) => {
   event.preventDefault();
   let input = document.getElementById("text-input");
   let input1 = input.value;
+  
   let p = document.querySelector("p");
   let li = document.createElement("li");
   let btn = document.createElement("button");
@@ -23,7 +24,6 @@ form.button.addEventListener("click", (event) => {
   });
 });
 ul.addEventListener("click", (event) => {
-  debugger
   if (event.target.style.textDecoration !== "line-through") {
     event.target.style.textDecoration = "line-through";
   }else{
