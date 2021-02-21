@@ -1,10 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
+    let containsP = false;
     let form = document.querySelector('#todo_list_form');
     let todo = document.querySelector('#todo_list');
+    let body = document.querySelector('body')
+    let p = document.createElement('p');
+    p.classList.add('error_message');
+    let errorMessage = 'Error! Todo cannot be empty!';
+    body.appendChild(p);
     form.addEventListener('submit', (event) => {
         event.preventDefault();
         let input = document.querySelector('#add_to_todo_list');
-        // input.style.whiteSpace = 'pre-line';
         let item = input.value;
         if(item){
             let li = document.createElement('li');
@@ -20,13 +25,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 let killParent = event.target.parentNode;
                 killParent.parentNode.removeChild(killParent);
             });
+            if(p.textContent = errorMessage) {
+                p.textContent = '';
+            }
         } else {
-            let body = document.querySelector('body');
-            let p = document.createElement('p');
-            body.appendChild(p);
-            p.classList.add('error_message');
-            let errorMessage = 'Error! Todo cannot be empty!';
-            p.textContent = errorMessage;   
+            p.textContent = errorMessage;
         }
     });
     todo.addEventListener('click', (event) => {
@@ -37,4 +40,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+
 
