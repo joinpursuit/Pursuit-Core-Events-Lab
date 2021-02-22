@@ -30,6 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
         button.addEventListener("click", (e) => {
           button.parentNode.remove(e);
+        
         });
       }
     }
