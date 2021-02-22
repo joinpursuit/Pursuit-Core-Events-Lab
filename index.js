@@ -1,15 +1,7 @@
-//  const addListItem = () => {
-//      const ul = document.querySelector("#list")
-//      let listItem = document.createElement("li")
-//      let input = document.querySelector("#input").value
-//      listItem.textContent = input
-//      ul.appendChild(listItem)
-//  }
+
  
  
  document.addEventListener("DOMContentLoaded", () => {
-
-    //const button = document.querySelector("#add-to-do-list")
     
     const form = document.querySelector("form")
     const p = document.querySelector("#error")
@@ -19,8 +11,7 @@
 
     form.addEventListener("submit", (event) => {
         event.preventDefault()
-   
-        // const input = document.querySelector("#input").value
+  
         if(input.value === "") {
             p.textContent = `Error. Todo cannot be empty`
             // setTimeout(()=> {
