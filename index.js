@@ -28,5 +28,4 @@
     list.addEventListener("click", (e) => {
         e.target.style.textDecoration = "line-through"
         })
-
 })
