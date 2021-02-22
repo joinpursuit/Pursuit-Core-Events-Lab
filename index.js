@@ -12,10 +12,16 @@ function list(){
 
     button.addEventListener("click", ()=>{
     event.preventDefault()
-    const input = document.querySelector("input").value
+    const input = document.querySelector("textarea").value
+    let array = input.split("\n")
+
+
     document.querySelector("form").reset()
 
-    if (input){
+console.log(input)
+
+for (let el of array){
+    if (el){
         error.textContent = ""
         add()
     } else {
@@ -23,14 +29,21 @@ function list(){
     }
 
 
-   function add() { 
-    const item = document.createElement("li")
-    // const deleteBut = document.createElement("button")
-    // deleteBut.textContent = "Delete"
-    item.textContent = `${input}            `
-    list.appendChild(item)
-    // item.appendChild(deleteBut)
-   }
+    function add() { 
+        const item = document.createElement("li")
+        const deleteBut = document.createElement("button")
+        deleteBut.textContent = "Delete"
+        item.textContent = `${el}         `
+        list.appendChild(item)
+        item.appendChild(deleteBut)
+
+        deleteBut.addEventListener("click", (ev) =>{
+            deleteBut.parentNode.remove(ev)
+        })
+       }
+
+}
+  
 })
 
 list.addEventListener("click" , (ev) => {
@@ -40,7 +53,10 @@ list.addEventListener("click" , (ev) => {
         ev.target.style.textDecoration = "line-through"
     }
 })
-
+    
+    
 }
+
+
 
 
