@@ -13,8 +13,8 @@ document.addEventListener('DOMContentLoaded', ()=>{
    }
 
  const form = document.getElementById('form')
-  let user = document.getElementById('to-do')
-  let para = document.querySelectorAll('li')
+  //let user = document.getElementById('to-do')
+  //let para = document.querySelectorAll('li')
     form.addEventListener('submit', (event)=>{
         event.preventDefault()
         listToDo()
