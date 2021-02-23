@@ -23,7 +23,7 @@ Our app will have the following items:
 
 - An `h1` title (e.g. "My To-Dos").
 - A single `ul` tag, empty when the page is first loaded.
-- A `form` for the user to add a new to-do, with a single text `input` and a `submit` button.
+- A `form` for the user to add a new to-do, with a single text `input` and a `submit` button.>
 
 And the following functionalities:
 
