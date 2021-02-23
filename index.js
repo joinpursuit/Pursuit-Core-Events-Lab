@@ -1,46 +1,47 @@
-console.log("Code your solution!")
+console.log("Code your solution!");
 
 document.addEventListener("DOMContentLoaded", () => {
-    const ul = document.querySelector("ul");
-    const form = document.querySelector("form");
-    
-    form.addEventListener("submit", (event) => {
-        event.preventDefault();
+  const ul = document.querySelector("ul");
+  const form = document.querySelector("form");
+
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+
     let textArea = document.querySelector("textarea");
     const p = document.querySelector("p");
-    if(textArea.value === "") {
-        p.innerText = "Error: To-Do List cannot be empty";
+    const words = textArea.value.split("\n");
+    if (textArea.value === "") {
+      p.innerText = "Error: To-Do List cannot be empty";
     } else {
+      for (word of words) {
+          if(word !== ""){
         let li = document.createElement("li");
-        li.textContent = textArea.value;
+        li.textContent = word;
         ul.appendChild(li);
         p.innerText = "";
 
         let delButton = document.createElement("button");
         delButton.innerText = "Delete";
-        li.append(delButton)
+        li.append(delButton);
 
         delButton.addEventListener("click", () => {
-            ul.removeChild(li)
-        })
-        
-    }
-   
-    textArea.value = ""
-
-    })
-
-    const removeStrikethrough = (event) => {
-        if(event.target.style.textDecorationLine === "line-through") {
-            event.target.style.textDecorationLine = "none"
-        } else {
-            event.target.style.textDecorationLine = "line-through"
-        }
+          ul.removeChild(li);
+        });
+            }
+      }
     }
 
-    let list = document.querySelector("ul")
-    list.addEventListener("click", removeStrikethrough)
+    textArea.value = "";
+  });
 
-})
+  const removeStrikethrough = (event) => {
+    if (event.target.style.textDecorationLine === "line-through") {
+      event.target.style.textDecorationLine = "none";
+    } else {
+      event.target.style.textDecorationLine = "line-through";
+    }
+  };
 
-
+  let list = document.querySelector("ul");
+  list.addEventListener("click", removeStrikethrough);
+});
