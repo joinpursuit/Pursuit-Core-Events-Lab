@@ -26,6 +26,6 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     ul.addEventListener("click", (event) => {
         event.target.style.textDecoration = event.target.style.textDecoration === "line-through" ? "none" : "line-through"
-        event.target.style.color = event.target.style.color === "rgb(46, 187, 190)" ? "" : "rgb(46, 187, 190)"
+        event.target.style.color = event.target.style.color === "rgb(0, 0, 0)" ? "" : "rgb(0, 0, 0)"
     })
 })
