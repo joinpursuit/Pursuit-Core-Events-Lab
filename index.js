@@ -1,30 +1,46 @@
+document.addEventListener("DOMContentLoaded", () =>{
+   const textArea= document.querySelector('textarea')
+    const p = document.querySelector('p')
+    const unorderedList = document.querySelector('ul')
+    const form = document.querySelector("form")
 
+    form.addEventListener("submit", (event)=>{
+        event.preventDefault()
+        if(!textArea.value){
+            p.textContent = "Error"
+        } else {
+            p.textContent = ""
 
-document.addEventListener("DOMContentLoaded", function(){
-   const errors = document.querySelector('p')
-   const input = document.querySelector('input')
-   const unorderedList = document.querySelector("ul")
-
-   unorderedList.addEventListener("click", (event) =>{
-       // if(event.target.tagName === "LI")
-        event.target.style.textDecoration = "line-through"
-        
-    })
-        
-   document.querySelector('form').addEventListener("submit", (event)=>{
-            event.preventDefault()
-            if(!input.value){
-                let message = errors.textContent = "Error"
-                return message
+            let arrayOfWords =textArea.value.split("\n")
+            arrayOfWords.forEach((word=>{
+                if(word !== ""){
+                const li = document.createElement("li")
+                li.textContent = word.trim()
+                unorderedList.appendChild(li)
+                const deleteButton = document.createElement("button")
+                deleteButton.textContent = "Delete"
+                li.appendChild(deleteButton)
+                
+                deleteButton.addEventListener("click", (event) =>{
+                unorderedList.removeChild(li)
+                debugger
+                
+                })
+            }
+            }))
         }
-        errors.textContent = ""
-        
-        const listItems= document.createElement("li")
-        listItems.textContent = input.value
-        unorderedList.appendChild(listItems)
-
-    })  
+    })
+    
+    unorderedList.addEventListener("click", (event)=>{
+        if(event.target.style.textDecoration ==="line-through"){
+            event.target.style.textDecoration = 'none'
+        } else {
+            event.target.style.textDecoration = "line-through"
+        }
 })
-        
+})
 
-
+         
+ 
+ 
+ 
