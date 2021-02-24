@@ -1,6 +1,6 @@
 [![Pursuit Logo](https://avatars1.githubusercontent.com/u/5825944?s=200&v=4)](https://pursuit.org)
 
-# Events Lab
+# Events Lab by Durdona
 
 ## Getting Started 
 * Fork this repo
