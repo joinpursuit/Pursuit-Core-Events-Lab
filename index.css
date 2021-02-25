@@ -1,0 +1,19 @@
+li {
+    position: relative;
+    display:inline-block;
+    width: 40%;
+    border: solid #3a312b 2px;
+    text-align: center;
+    margin: 1%;
+    background-color: #ebe9e9;
+    border-radius: 30px;
+}
+body {
+    background-color: #bcbcbc;
+}
+button {
+    margin: 5px;
+}
+.linethrough {
+    background-color: black;
+}
