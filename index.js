@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
         let inputBox = document.querySelector("#inputText");
         let toDo = String(inputBox.value);
         let strArr = toDo.split("\n");
-        console.log(strArr)
         inputBox.value = "";
         
         for(let str of strArr){
