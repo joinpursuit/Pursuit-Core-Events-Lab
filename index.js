@@ -43,12 +43,12 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     //create event listener on ul variable to cross out list item
     ul.addEventListener("click", (event) => {
-        if (event.target.style.textDecoration === "line-through") {
+        if (event.target.style.textDecoration === "line-through solid rgb(0, 0, 0)") {
             event.target.style.textDecoration = ""
-            event.target.style.backgroundColor = ""
+            //event.target.style.backgroundColor = ""
         } else {
-            event.target.style.textDecoration = "line-through"
-            event.target.style.backgroundColor = "blue"
+            event.target.style.textDecoration = "line-through solid rgb(0, 0, 0)"
+            //event.target.style.backgroundColor = "blue"
         }
     })
     

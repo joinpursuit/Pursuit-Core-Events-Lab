@@ -6,13 +6,13 @@ li {
     text-align: center;
     margin: 1%;
     background-color: #ebe9e9;
-    border-radius: 5px;
+    border-radius: 30px;
 }
 body {
     background-color: #bcbcbc;
 }
 button {
-    padding: 2px;
+    margin: 5px;
 }
 .linethrough {
     background-color: black;
