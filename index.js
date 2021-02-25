@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     
     let submitButton = document.querySelector('#submitButton');
+    
     submitButton.addEventListener('click', () => {
         let inputBox = document.querySelector("#inputText");
         let toDo = String(inputBox.value);
@@ -18,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     para.textContent = "Error! Todo cannot be empty.";
                     document.body.appendChild(para);
             }else{
+
                 if(document.body.contains(document.querySelector(".errorPara"))){
                     let paras = document.querySelectorAll(".errorPara");
                     for(let para of paras){
@@ -28,15 +30,19 @@ document.addEventListener('DOMContentLoaded', () => {
                 let uList = document.querySelector('#list');
                 let listItem = document.createElement('li');
                 listItem.textContent = str;
+                listItem.style.margin = "10px 10px 10px 10px"
 
                 let deleteButton =  document.createElement('button');
+                deleteButton.innerHTML = "Delete";
+                deleteButton.style.margin = "0px 250px 0px 0px"
+                deleteButton.style.float = 'right';
+                listItem.appendChild(deleteButton);
+                
+                
                 deleteButton.addEventListener('click', (event)=>{
                     uList.removeChild(event.target.parentElement)
                 })
                 
-                deleteButton.innerHTML = "Delete";
-                deleteButton.style.margin = "5px 5px 5px 250px"
-                listItem.appendChild(deleteButton);
                 
                 uList.appendChild(listItem);
 
