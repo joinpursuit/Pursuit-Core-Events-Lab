@@ -1,0 +1,18 @@
+body {
+  background-color: rgb(3, 211, 252);
+}
+
+button {
+  margin: 5px;
+}
+
+textarea {
+  outline: none;
+  background-color: rgb(241, 239, 113);
+  color: black;
+}
+
+h1 {
+  font-size: 48;
+  font-family: cursive;
+}
