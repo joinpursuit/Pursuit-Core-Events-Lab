@@ -8,15 +8,18 @@ document.addEventListener("DOMContentLoaded", () => {
     let extendedInput = input.value.split("\n");
     const ul = document.querySelector("ul");
     // BONUS MULTIPLE LINE ENTRY IDEAS: the textarea tag creates a string as the value. Each entry has a space between the next. The logic @ the moment is to get the value of the input --> split it into an array --> and then either iterate through the array and into the "li" or push into a blank array and then interate that array into the "li".
-    if (extendedInput.length === 0) {
+    if (extendedInput.length === 1 && extendedInput[0] === "") {
       const errorMessage = document.querySelector("p");
       errorMessage.textContent = "Error. Todo cannot be empty";
     } else {
+      // debugger
       extendedInput.forEach((item) => {
+        const errorMessage = document.querySelector("p");
         const listItem = document.createElement("li");
         const deleteButton = document.createElement("button");
         // console.log(item);
         // debugger
+        errorMessage.textContent = "";
         listItem.textContent = item;
         ul.appendChild(listItem);
         listItem.appendChild(deleteButton);

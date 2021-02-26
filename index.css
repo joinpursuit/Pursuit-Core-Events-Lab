@@ -21,8 +21,22 @@ body {
 h1 {
     color:darkslateblue
 }
+
+ul {
+  flex: auto;
+  justify-content: space-between;
+}
+
+ul > #to-Do-List {
+  justify-content: flex-start;
+}
+
+ul > #del-button {
+  justify-content: flex-end;
+}
+
 li {
-  width: 100px;
+  width: 200px;
   border-bottom: solid 1px rgb(46, 51, 126);
   margin-bottom: 4px;
 }
