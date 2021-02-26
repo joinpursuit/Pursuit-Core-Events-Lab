@@ -1,24 +1,46 @@
 // console.log("Code your solution!");
 
 let toDoInput = document.querySelector("#toDoInput");
-let newTodoTask = document.querySelector("#newTodo");
-let submitTodo = document.querySelector("#submitTodo");
-submitTodo.addEventListener("click", (e) => {
+let ul = document.querySelector("ul");
+let form = document.querySelector("form");
+let pTag = document.querySelector("p");
+
+form.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  let newTodo = document.createElement("li");
+  if (toDoInput.value.length === 0) {
+    pTag.textContent = "String Errror - Cannot submit empty ToDo";
+  } else {
+    const lines = toDoInput.value.split("\n");
+   
+    for (const line of lines) {
+      const listItem = document.createElement("li");
+      const deleteButton = document.createElement("button");
+      if (line) {
+        listItem.textContent = line;
+        ul.appendChild(listItem);
 
-  newTodo.textContent = toDoInput.value;
-  newTodoTask.appendChild(newTodo);
-});
-let newToDoStyle = document.querySelector("#newTodo");
-newToDoStyle.addEventListener("click", (e) => {
-    debugger
-  e.target.style.textDecoration = "line-through solid rgb(0, 0, 0)";;
-});
+        deleteButton.innerHTML = "Delete";
+        listItem.appendChild(deleteButton);
+        pTag.textContent = "";
+      }
 
-// document.getElementById("newTodo").style.textDecoration =
-//   "line-through solid rgb(0, 0, 0)";
+      deleteButton.addEventListener("click", (e) => {
+        deleteButton.parentNode.remove(e);
+      });
+
+      listItem.addEventListener("click", (e) => {
+        
+        if (listItem.style.textDecoration === "line-through") {
+          listItem.style.textDecoration = "none";
+        } else {
+          listItem.style.textDecoration = "line-through";
+        }
+      });
+    }
+  }
+  toDoInput.value = "";
+});
 
 // create ID for Ul
 // creat ID for text
