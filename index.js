@@ -1,19 +1,18 @@
-console.log("Code your solution!");
 let ul = document.getElementById("unordered-list");
 let form = document.querySelector("form");
 form.button.addEventListener("click", (event) => {
   event.preventDefault();
-  let input = document.getElementById("text-input");
-  let input1 = input.value;
-  
+  let inputAll = document.getElementById("text-input").value;
+  let input = inputAll //.split("\n")
+  console.log(input) 
   let p = document.querySelector("p");
   let li = document.createElement("li");
   let btn = document.createElement("button");
-  if (input1 === "") {
+  if (input.length === 0) {
     p.innerText = "Error. Todo cannot be empty";
   } else {
     btn.textContent = "Delete";
-    li.textContent = input1 + " ";
+    li.textContent = input + " ";
     ul.appendChild(li);
     li.appendChild(btn);
     p.textContent = "";
