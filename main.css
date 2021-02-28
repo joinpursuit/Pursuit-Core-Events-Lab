@@ -1,0 +1,43 @@
+  
+header {
+    background-color:#7bcfb3;
+    border: 10px;
+    text-align: center;
+    font-size: 35px;
+    color: white;
+}
+img{
+    width: fit-content;
+    height: 30%;
+}
+
+body {
+    position: static;
+    top: 0px;
+    right: 0;
+    background-color: rgb(6, 88, 121);
+}
+h1 {
+    color: rgb(201, 196, 196);
+    font-size: px;
+    /* font-family: ; */
+}
+
+h2{
+    color: white;
+    text-align: center;
+    font-family: fantasy;
+}
+label{
+    color:cornflowerblue;
+    font-size: px;
+}
+form{
+    background-color: #7bcfb3;
+    text-align: center;
+}
+li{
+    text-align: center;
+    color: orange;
+    list-style-type: none;
+}
