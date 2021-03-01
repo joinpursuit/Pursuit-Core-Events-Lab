@@ -8,15 +8,17 @@ addNewTask.addEventListener('click', (e) => {
     e.preventDefault()
     const newTask = document.createElement('li')
     newTask.textContent = input.value
-    taskList.appendChild(newTask)
-    if (input.value===null) {
+    if (input.value==='') {
         alert('Please enter a task before attempting to add to the list')
+    } else {
+        taskList.appendChild(newTask)
     }
     //console.log(e.childNode.target)
 })
 
+
 taskList.addEventListener('click', (e) => {
-    taskList.childNode.style.textDecoration = 'linethrough'
+    e.target.style.textDecoration = 'line-through solid black'
 })
 
 
