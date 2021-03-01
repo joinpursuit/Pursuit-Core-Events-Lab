@@ -1,1 +1,4 @@
-console.log("Code your solution!")
+function todo(){
+    const input = Document.queryselector("#text-input")
+    const output = Document.queryselector("ul")
+}
