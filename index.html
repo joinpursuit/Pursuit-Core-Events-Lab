@@ -1,8 +1,32 @@
 <html>
-    <head>
-      <script src="index.js"></script>
-    </head>
-    <body>
-      <h1> CODE YOUR SOLUTION </h1>      
-    </body>
+  <head>
+    <script src="index.js"></script>
+    <style>
+      li {
+        font-size: 25px;
+      }
+
+      p {
+        font-size: 25px;
+      }
+      body {
+        background-color: rgb(117, 40, 40);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>To-Do's</h1>
+    <hr />
+    <form id="form">
+      <input
+        autocomplete="off"
+        type="text"
+        id="input"
+        placeholder="Type a todo"
+      />
+      <button type="submit">Submit</button>
+    </form>
+    <p id="para"></p>
+    <ul id="ulist"></ul>
+  </body>
 </html>
