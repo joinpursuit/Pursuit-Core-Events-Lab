@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const form = document.querySelector('form')
     const list = document.querySelector('ul')
     const error = document.querySelector('p')
 
@@ -8,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const input = document.querySelector('input').value
 
         if (input === "") {
-            error.textContent = 'Error.'
+            error.textContent = 'Error'
         } else {
             let li = document.createElement('li')
             li.textContent = input
