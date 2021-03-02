@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const input = document.querySelector('input').value
 
         if (input === "") {
-            error.textContent = 'Error. Todo cannot be empty'
+            error.textContent = 'Error.'
         } else {
             let li = document.createElement('li')
             li.textContent = input
