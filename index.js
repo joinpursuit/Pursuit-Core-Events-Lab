@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+    const form = document.querySelector('form')
     const list = document.querySelector('ul')
     const error = document.querySelector('p')
 
