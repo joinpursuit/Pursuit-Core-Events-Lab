@@ -22,9 +22,7 @@ taskList.addEventListener('click', (e) => {
         e.target.style.textDecoration = 'line-through solid black'        
         //console.log(`clickCount is at:${clickCount} at even count`)        
     } else if (clickCount % 2 !== 0) { //if an odd num of clicks is observed, remove the styling
-        e.target.style.textDecoration = 'none'
-        console.log(`clickCount is at:${clickCount} at odd count`)
-        
+        e.target.style.textDecoration = 'none'                
     }
     clickCount++//increase the number of clicks per event
 })
