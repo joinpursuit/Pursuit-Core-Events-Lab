@@ -1,8 +1,15 @@
 <html>
     <head>
-      <script src="index.js"></script>
+      <script src="index.js" defer></script>
     </head>
     <body>
-      <h1> CODE YOUR SOLUTION </h1>      
+      <h1> Checklist </h1> 
+
+      <form>
+        <input type="text" id='task-input'>
+        <button type="submit" id='btn' onfocus="this.value=''">Add New Task</button>
+      </form> 
+
+      <ul id='task-list'></ul>
     </body>
 </html>
