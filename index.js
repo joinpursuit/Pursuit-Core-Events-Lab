@@ -1,4 +1,3 @@
-
 const input = document.querySelector('#task-input')
 const taskList = document.querySelector('#task-list')
 const addNewTask = document.querySelector('#btn')
@@ -7,7 +6,6 @@ const addNewTask = document.querySelector('#btn')
 
 addNewTask.addEventListener('click', (e) => {
     e.preventDefault()
-    clickCount++
     const newTask = document.createElement('li')
     newTask.textContent = input.value
     if (input.value==='') {
@@ -18,13 +16,19 @@ addNewTask.addEventListener('click', (e) => {
     }    
 })
 
+let clickCount = 0
 taskList.addEventListener('click', (e) => {
-    const clickCount = 0
+    console.log(`clickCount is at:${clickCount}`)
     if (clickCount % 2 === 0) {
         e.target.style.textDecoration = 'line-through solid black'        
+        console.log(`clickCount is at:${clickCount} at even count`)
+        //clickCount++
     } else if (clickCount % 2 !== 0) {
         e.target.style.textDecoration = 'none'
+        console.log(`clickCount is at:${clickCount} at odd count`)
+        //clickCount++
     }
+    clickCount++
 })
 
 //taskList.addEventListener('click', (e) => {
