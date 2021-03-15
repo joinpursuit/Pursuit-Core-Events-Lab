@@ -18,10 +18,12 @@ document.addEventListener("DOMContentLoaded", () => {
         let li = document.createElement("li");
         li.textContent = word;
         ul.appendChild(li);
+        debugger
         p.innerText = "";
 
         let delButton = document.createElement("button");
-        delButton.innerText = "Delete";
+        delButton.classList.add("delete-button")
+        delButton.innerText = "x";
         li.append(delButton);
 
         delButton.addEventListener("click", () => {
