@@ -1,0 +1,51 @@
+body {
+  background: gold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  text-shadow: 3px 3px 8px green;
+  font: bold 48px 'Courier New', Courier, monospace;
+}
+
+p {
+  color: red;
+  font-weight: bold;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+li {
+  text-decoration: none solid rgb(0, 0, 0);
+  list-style: none;
+  font: 27px
+}
+
+.delete-button {
+  background: transparent;
+  border: none;
+  color: red;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+textarea {
+  text-align: center;
+  border: 2px solid green;
+  font: 16px 'Courier New', Courier, monospace;
+}
+
+.submit-button {
+  margin: 8px;
+  background-color: gray;
+  font: bold 18px 'Courier New', Courier, monospace;
+}
