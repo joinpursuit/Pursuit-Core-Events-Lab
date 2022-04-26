@@ -24,9 +24,12 @@ h1 {
 }
 
 h2{
-    color: white;
+    color: Black;
     text-align: center;
     font-family: fantasy;
+    background-color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 label{
     color:cornflowerblue;
@@ -37,7 +40,19 @@ form{
     text-align: center;
 }
 li{
-    text-align: center;
-    color: orange;
+    text-align: justify;
+    color: pink;
     list-style-type: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-indent: 595px;
+    ;
 }
+/*
+.deleted{   
+    margin-left: px;
+}
+ul{
+    display: flex;
+    justify-content: center;
+} */

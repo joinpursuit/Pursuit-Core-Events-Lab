@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (line.length !== 0) {
             listItem.textContent = line;
             ul.appendChild(listItem);
+            button.classList.add="deleted"
             button.textContent = "Delete Item";
             listItem.appendChild(button);
             p.textContent = "";
@@ -30,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
         button.addEventListener("click", (e) => {
           button.parentNode.remove(e);
-        
+
         });
       }
     }
